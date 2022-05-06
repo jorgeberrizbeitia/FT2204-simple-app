@@ -1,0 +1,10 @@
+<h1>Estos son todos los pokemons</h1>
+
+{{#each pokemonList}}
+
+  {{!-- <li>{{this}}</li> --}}
+  <li>
+    <a href="/pokemon/{{this._id}}">{{this.name}}</a>
+  </li>
+
+{{/each}}

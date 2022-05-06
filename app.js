@@ -3,7 +3,7 @@
 require("dotenv/config");
 
 // ℹ️ Connects to the database
-require("./db");
+require("./db"); // siempre busca archivo index.js
 
 // Handles http requests (express is node js framework)
 // https://www.npmjs.com/package/express
@@ -16,7 +16,9 @@ const hbs = require("hbs");
 const app = express();
 
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
-require("./config")(app);
+const laFunction = require("./config")
+laFunction(app)
+// require("./config")(app);
 
 // default value for title local
 const capitalized = require("./utils/capitalized");
